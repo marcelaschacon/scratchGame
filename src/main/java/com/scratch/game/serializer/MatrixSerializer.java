@@ -10,14 +10,14 @@ import com.scratch.game.model.symbol.Symbol;
 public class MatrixSerializer extends JsonSerializer<Symbol[][]> {
     @Override
     public void serialize(Symbol[][] matrix, JsonGenerator gen, SerializerProvider serializers) throws IOException {
-        gen.writeStartArray(); // Start the outer array
+        gen.writeStartArray();
         for (Symbol[] row : matrix) {
-            gen.writeStartArray(); // Start a row
+            gen.writeStartArray();
             for (Symbol symbol : row) {
-                gen.writeString(symbol.getName()); // Write each symbol's name
+                gen.writeString(symbol.getName());
             }
-            gen.writeEndArray(); // End the row
+            gen.writeEndArray();
         }
-        gen.writeEndArray(); // End the outer array
+        gen.writeEndArray();
     }
 }
