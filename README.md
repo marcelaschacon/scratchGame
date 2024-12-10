@@ -1,5 +1,5 @@
-# scratchGame
-
+# ScratchGame
+## GO INSIDE THE PROJECT FOLDER THEN
 ## FIRST STEP YOU NEED TO RUN
 -- mvn clean package
 
