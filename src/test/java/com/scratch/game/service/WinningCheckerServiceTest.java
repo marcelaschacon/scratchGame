@@ -12,14 +12,14 @@ import java.util.*;
 class WinningCheckerServiceTest {
 
     private static final String NAME_B = "B";
-	private static final int MULTIPLIER = 5;
-	private static final String STANDARD = "standard";
-	private static final String NAME_A = "A";
-	private static final String EXPECTED_AREA_NOT_TO_MATCH_BUT_IT_DID = "Expected area not to match but it did.";
+    private static final int MULTIPLIER = 5;
+    private static final String STANDARD = "standard";
+    private static final String NAME_A = "A";
+    private static final String EXPECTED_AREA_NOT_TO_MATCH_BUT_IT_DID = "Expected area not to match but it did.";
 
-	Scratch scratch = new Scratch();
+    Scratch scratch = new Scratch();
 	
-	@Test
+    @Test
     void testCheckWinWithWinningCombination() {
         Map<String, WinCombination> winCombinations = new HashMap<>();
         WinCombination winCombination = new WinCombination();
