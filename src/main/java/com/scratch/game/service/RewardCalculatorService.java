@@ -14,7 +14,7 @@ public class RewardCalculatorService {
 	private static final String EXTRA_BONUS = "extra_bonus";
 	private static final String MULTIPLY_REWARD = "multiply_reward";
 	
-	public double calculateReward(Symbol[][] matrix, Scratch Scratch, double betAmount) {
+    public double calculateReward(Symbol[][] matrix, Scratch Scratch, double betAmount) {
         double totalReward = 0.0;
         Map<String, Integer> symbolMatchCount = new HashMap<>();
         for (int row = 0; row < matrix.length; row++) {
