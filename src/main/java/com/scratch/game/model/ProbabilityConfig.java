@@ -6,11 +6,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ProbabilityConfig {
 	
-	@JsonProperty("column")
+    @JsonProperty("column")
     private int column;
-	@JsonProperty("row")
-	private int row;
-	@JsonProperty("symbols")
+    @JsonProperty("row")
+    private int row;
+    @JsonProperty("symbols")
     private Map<String, Double> symbols;
 
     public int getColumn() {
