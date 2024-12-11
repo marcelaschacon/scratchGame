@@ -22,7 +22,7 @@ public class ScratchFacade {
 	private static final String LOST_GAME = "LOST GAME";
 
 	public static void playGame(String configFilePath, double bettingAmount) {
-		try (InputStream inputStream = ScratchGame.class.getClassLoader().getResourceAsStream(configFilePath)) {
+	    try (InputStream inputStream = ScratchGame.class.getClassLoader().getResourceAsStream(configFilePath)) {
             if (inputStream == null) {
                 throw new IllegalArgumentException("Config file not found in resources directory");
             }
@@ -56,7 +56,7 @@ public class ScratchFacade {
 	}
 
 	private static void printResult(Symbol[][] matrix, double reward,
-			StringBuilder stringBuilder) throws JsonProcessingException {
+		StringBuilder stringBuilder) throws JsonProcessingException {
 		Response response = new Response(matrix, reward, "winning", stringBuilder.toString());
 		ObjectMapper jsonMapper = new ObjectMapper();
 		jsonMapper.setPropertyNamingStrategy(PropertyNamingStrategies.SNAKE_CASE);
@@ -65,7 +65,7 @@ public class ScratchFacade {
 	}
 	
 	public static String formatMatrixAsJson(Symbol[][] matrix) {
-		StringBuilder result = new StringBuilder();
+	    StringBuilder result = new StringBuilder();
 	    result.append("\"matrix\": [");
 	    for (int i = 0; i < matrix.length; i++) {
 	        result.append("[");
