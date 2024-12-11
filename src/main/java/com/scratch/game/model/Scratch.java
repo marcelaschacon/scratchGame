@@ -7,9 +7,9 @@ import com.scratch.game.model.symbol.Symbol;
 
 public class Scratch {
 	
-	@JsonProperty("rows")
-	private int rows = 3;
-	@JsonProperty("columns")
+    @JsonProperty("rows")
+    private int rows = 3;
+    @JsonProperty("columns")
     private int columns = 3;
     @JsonProperty("symbols")
     private Map<String, Symbol> symbols;
