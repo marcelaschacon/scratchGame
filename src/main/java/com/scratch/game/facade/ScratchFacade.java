@@ -29,11 +29,11 @@ public class ScratchFacade {
             ObjectMapper objectMapper = new ObjectMapper();
             objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
             Scratch scratch = objectMapper.readValue(inputStream, Scratch.class);
-         	Map<String, Symbol> symbols = SymbolUtil.initializeSymbols(scratch);
-         	scratch.setSymbols(symbols);
-         	MatrixGeneratorService generator = new MatrixGeneratorService();
-         	Symbol[][] matrix = generator.generateMatrix(scratch);
-         	WinningCheckerService winningChecker = new WinningCheckerService(scratch);
+            Map<String, Symbol> symbols = SymbolUtil.initializeSymbols(scratch);
+            scratch.setSymbols(symbols);
+            MatrixGeneratorService generator = new MatrixGeneratorService();
+            Symbol[][] matrix = generator.generateMatrix(scratch);
+            WinningCheckerService winningChecker = new WinningCheckerService(scratch);
             if(winningChecker.checkWin(matrix)) {
             	RewardCalculatorService calculator = new RewardCalculatorService();
             	double reward = calculator.calculateReward(matrix, scratch, bettingAmount);
