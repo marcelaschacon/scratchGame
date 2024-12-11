@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class Probabilities {
 	
-	@JsonProperty("standard_symbols")
+    @JsonProperty("standard_symbols")
     private List<ProbabilityConfig> standardSymbols;
 
     @JsonProperty("bonus_symbols")
