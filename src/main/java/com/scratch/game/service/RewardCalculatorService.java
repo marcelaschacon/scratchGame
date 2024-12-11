@@ -10,7 +10,7 @@ import com.scratch.game.model.WinCombination;
 
 public class RewardCalculatorService {
 	
-    private static final String SAME_SYMBOLS = "same_symbols";
+        private static final String SAME_SYMBOLS = "same_symbols";
 	private static final String EXTRA_BONUS = "extra_bonus";
 	private static final String MULTIPLY_REWARD = "multiply_reward";
 	
